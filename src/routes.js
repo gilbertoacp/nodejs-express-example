@@ -1,5 +1,5 @@
 const IndexController = require('./controllers/index.controller');
 
 module.exports = (app) => {
-    app.get('/welcome', IndexController.index);
+    app.get('/welcome1', IndexController.index);
 };
