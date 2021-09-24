@@ -7,13 +7,16 @@ services:
       - ~/docker/databases/mongodata:/data/db
     ports:
       - 27017:27017
-  web:
+    logging: 
+      driver: none
+  server:
     build: .
+    restart: always
     depends_on:
       - db
     ports: 
       - ${PORT}:${PORT}
     links: 
       - db
-    volumes: 
-      - .:/var/app
+    volumes:
+      - .:/app
