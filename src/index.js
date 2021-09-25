@@ -7,7 +7,7 @@ async function bootstrap() {
 
     const app = express();
 
-    // await mongoose.connect(process.env.MONGO_DB_URI);
+    await mongoose.connect(process.env.MONGO_DB_URI);
 
     app.set('port', process.env.PORT);
 

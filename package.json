@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon -r dotenv/config ./src",
+    "start:dev": "nodemon -r dotenv/config --config nodemon.json  ./src/index.js",
     "start:assets-dev": "webpack --watch --hot --mode development",
     "start": "node ./src"
   },
