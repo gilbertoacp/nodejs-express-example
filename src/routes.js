@@ -8,4 +8,7 @@ module.exports = (app) => {
     app.get('/home', (req, res) => {
         res.send('Home Page');
     });
+    app.get('/signin', (req, res) => {
+        res.send('SignIn Page');
+    });
 };
