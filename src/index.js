@@ -2,6 +2,7 @@ const express  = require('express')
 const mongoose = require('mongoose');
 const routes   = require('./routes');
 const path     = require('path');
+const morgan   = require('morgan');
 
 async function bootstrap() {
 
@@ -20,6 +21,8 @@ async function bootstrap() {
     app.use(express.json());
 
     app.use(express.urlencoded({ extended: true }));
+
+    app.use(morgan("dev"));
 
     routes(app);
 

@@ -1,0 +1,23 @@
+version: "3"
+
+services: 
+  db:
+    image: "mongo"
+    volumes: 
+      - ~/docker/databases/mongodata:/data/db
+    ports:
+      - 27017:27017
+    logging: 
+      driver: none
+  server:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev  
+    depends_on:
+      - db
+    ports: 
+      - ${PORT}:${PORT}
+    links: 
+      - db
+    volumes:
+      - .:/usr/src/app
