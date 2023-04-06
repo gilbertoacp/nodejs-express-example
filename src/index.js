@@ -30,3 +30,4 @@ async function bootstrap() {
 }
 
 bootstrap().catch(err => console.log(err));
+    /*"start:assets-dev": "webpack --watch --hot --mode development",*/

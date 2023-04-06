@@ -6,7 +6,8 @@
   "scripts": {
     "start:dev": "nodemon -r dotenv/config --config nodemon.json  ./src/index.js",
     "start:assets-dev": "webpack --watch --hot --mode development",
-    "start": "node ./src"
+    "start": "node ./src",
+    "dev": "npm-run-all --parallel start:assets-dev start:dev "
   },
   "keywords": [],
   "author": "",
@@ -16,7 +17,8 @@
     "express-handlebars": "^5.3.3",
     "mongoose": "^6.0.5",
     "morgan": "^1.10.0",
-    "twig": "^1.15.4"
+    "twig": "^1.15.4",
+    "npm-run-all": "^4.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",

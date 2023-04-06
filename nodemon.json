@@ -1,4 +1,4 @@
 {
-  "ext": "js, twig",
+  "ext": "js, twig, css, scss",
   "legacyWatch": true
 }

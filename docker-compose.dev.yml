@@ -19,5 +19,7 @@ services:
       - ${PORT}:${PORT}
     links: 
       - db
+    env_file:
+      - .env
     volumes:
-      - .:/usr/src/app
+      - ./src:/app/src
